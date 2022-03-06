@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html title="test">
+
+<head>
+    <style>
+        body {
+            background-image: url("images/Background3.jpg");
+            background-color: #cccccc;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* object-fit: cover; */
+            padding-top: 80px;
+        }
+    </Style>
+    <style src="style/style.css"></style>
+    <script src="scripts/script.js"></script>
+</head>
+
+<body>
+    <div style="display: flex;">
+        <div style="flex-grow: 1;">
+            <h1 id="wep1" style="padding-left: 30px;">Weapon 1</h1>
+            <img id="wep1-img" src="images/question_mark_PNG27.png"
+                style="padding-left: 30px; height:120px;width:150px;"><br>
+            <h1 id="wep2" style="padding-left: 30px;">Weapon 2</h1>
+            <img id="wep2-img" src="images/question_mark_PNG27.png"
+                style="padding-left: 30px; height:120px;width:150px;"><br>
+            <h1 id="wep3" style="padding-left: 30px;">Weapon 1</h1>
+            <img id="wep3-img" src="images/question_mark_PNG27.png"
+                style="padding-left: 30px; height:120px;width:150px;"><br>
+        </div>
+
+        <div>
+            <h1 id="skill" style="padding-right: 30px;">Skill</h1>
+            <img id="skill-img" src="images/question_mark_PNG27.png"
+                style="padding-right:30px; height:120px;width:150px;"><br><br>
+            <button onclick="loadoutBuilder(false)">I'm Feeling Lucky</button><br><br>
+            <button onclick="loadoutBuilder(true)">I'm Feeling Lucky (SWORD ONLY)</button>
+        </div>
+        <div>
+        </div>
+    </div>
+</body>
+
+</html>
