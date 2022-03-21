@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html title="test">
-
+<html>
 <head>
     <style>
         body {
@@ -16,9 +15,9 @@
     <script src="scripts/script.js"></script>
 </head>
 
-<body>
+<body onload="init()">
     <div style="display: flex;">
-        <div style="flex-grow: 1;">
+        <div style="flex-grow: 11;">
             <h1 id="wep1" style="padding-left: 30px;">Weapon 1</h1>
             <img id="wep1-img" src="images/question_mark_PNG27.png"
                 style="padding-left: 30px; height:120px;width:150px;"><br>
@@ -28,16 +27,27 @@
             <h1 id="wep3" style="padding-left: 30px;">Weapon 1</h1>
             <img id="wep3-img" src="images/question_mark_PNG27.png"
                 style="padding-left: 30px; height:120px;width:150px;"><br>
-        </div>
-
-        <div>
-            <h1 id="skill" style="padding-right: 30px;">Skill</h1>
+            <h1 id="skill" style="padding-left: 30px;">Skill</h1>
             <img id="skill-img" src="images/question_mark_PNG27.png"
-                style="padding-right:30px; height:120px;width:150px;"><br><br>
-            <button onclick="loadoutBuilder(false)">I'm Feeling Lucky</button><br><br>
-            <button onclick="loadoutBuilder(true)">I'm Feeling Lucky (SWORD ONLY)</button>
+                style="padding-left:30px; height:120px;width:150px;"><br>    
         </div>
-        <div>
+        <div style="flex-grow: 1;">
+            <h1>Skills</h1>
+            <div class="skill-container" id="container-3"></div>
+        </div>
+        <div style="flex-grow: 1;">
+            <h1>Preset Restrictions</h1>
+            <select name="random-dropdown" id="random-type-dropdown" onchange="adaptRestrictions()">
+                <option value="custom">Custom</option>
+                <option value="melee">Melee</option>
+                <option value="s5">S5 Rules</option>
+                <option value="madlad">Mad Lad</option>
+                <option value="chaotic">Chaotic</option>
+                <option value="sane">Sane</option>
+            </select>
+            <button onclick="loadoutBuilder()"> Feeling Lucky</button>
+            <div class="weapon-container" id="container-1"></div>
+            <div class="weapon-container" id="container-2"></div>
         </div>
     </div>
 </body>
